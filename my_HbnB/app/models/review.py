@@ -17,9 +17,9 @@ class Review(BaseModel):
             raise ValueError("User must be an instance of User")
         
         self.text = text
-        self.rsting = rating
+        self.rating = rating
         self.place = place
         self.user = user
         
-        place.add_review(self)
+        # Establish relationships
         user.reviews.append(self)

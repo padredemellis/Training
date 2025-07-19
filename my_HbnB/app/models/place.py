@@ -3,7 +3,7 @@ from .user import User
 import re
 
 class Place(BaseModel):
-    def __init__(self, title: str, price: float, latitude:float, longitude:float, owner:User):
+    def __init__(self, title: str, price: float, latitude:float, longitude:float, owner:User, description: str = ""):
         super().__init__()
         
         #Validations
@@ -31,7 +31,9 @@ class Place(BaseModel):
         
     def add_review(self, review):
         """Add review to the place"""
-        if review.place != self:
+        if not hasattr(review, 'place'):
+            review.place = self
+        elif review.place is not self:
             raise ValueError("Review doesn't belong to this place")
         self.reviews.append(review)
     
