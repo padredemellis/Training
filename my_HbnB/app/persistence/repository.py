@@ -1,3 +1,7 @@
+'''
+Sistema de Gestion de objetos:Repository,
+que actúa como una capa intermedia entre la lógica de negocio y el almacenamiento de datos.
+'''
 from abc import ABC, abstractmethod
 
 class Repository(ABC):
