@@ -1,7 +1,3 @@
-'''
-Sistema de Gestion de objetos:Repository,
-que actúa como una capa intermedia entre la lógica de negocio y el almacenamiento de datos.
-'''
 from abc import ABC, abstractmethod
 
 class Repository(ABC):
@@ -18,11 +14,15 @@ class Repository(ABC):
         pass
 
     @abstractmethod
-    def delete(self,obj_id, data):
+    def update(self, obj_id, data):
+        pass
+
+    @abstractmethod
+    def delete(self, obj_id):
         pass
     
     @abstractmethod
-    def get_by_attribute(self, attr_name,attr_value):
+    def get_by_attribute(self, attr_name, attr_value):
         pass
 
 class InMemoryRepository(Repository):
@@ -31,11 +31,15 @@ class InMemoryRepository(Repository):
     
     def add(self, obj):
         self._storage[obj.id] = obj
+        
+    def get(self, obj_id):
+        """Obtiene un elemento por ID"""
+        return self._storage.get(obj_id)  # Usando el diccionario directamente
     
     def get_all(self):
         return list(self._storage.values())
     
-    def update(self,obj_id, data):
+    def update(self, obj_id, data):
         obj = self.get(obj_id)
         if obj:
             obj.update(data)

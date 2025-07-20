@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./my_HbnB/app/models",
+        "./my_HbnB"
+    ]
+}
