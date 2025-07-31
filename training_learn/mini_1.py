@@ -16,8 +16,8 @@ class Persona:
     
     def presentarse(self)->str:
         return f'Hola soy {self.name} y tengo {self.edad}'
-
-fulano = Persona('Fulano', 15).presentarse()
-mengano = Persona('Mengano', 16).presentarse()
-print(fulano)
-print(mengano)
+if __name__ == '__main__':
+    fulano = Persona('Fulano', 15).presentarse()
+    mengano = Persona('Mengano', 16).presentarse()
+    print(fulano)
+    print(mengano)
