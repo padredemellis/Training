@@ -8,7 +8,11 @@ Your program will respond with a sentence that includes their
 name and the commission amount
 they're entitled to.
 '''
+def commission(name, sold):
+    commission = sold * 0.13
+    return f"Hi! {name} your commission balance is: ${commission}"
+
 name = input("what's your name?\n")
 sold = float(input("Write your balance for the month\n"))
-commission = sold * 0.13
-print (f"Hi! {name} your commission balance is: ${commission}")
+
+print(commission(name, sold))
