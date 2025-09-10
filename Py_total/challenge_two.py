@@ -9,8 +9,10 @@ name and the commission amount
 they're entitled to.
 '''
 def commission(name, sold):
+    if sold <= 0:
+        raise ValueError("Must be an amount greater than zero")
     commission = sold * 0.13
-    return f"Hi! {name} your commission balance is: ${commission}"
+    return f"Hi! {name} your commission balance is: ${commission:.2f}"
 
 name = input("what's your name?\n")
 sold = float(input("Write your balance for the month\n"))
