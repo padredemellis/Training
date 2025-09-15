@@ -1,17 +1,22 @@
 body {
-    background-color: bisque;
+    background-image: url("../img/city.webp");
+    background-size: cover;
 }
 .title {
     font-family: monospace;
-    color:red;
+    color:rgb(64, 255, 0);
     text-align: center;
 }
 
 p{
     text-align: center;
+    background-color: whitesmoke;
+    background-size: 5%;
+    padding: 5px;
+
 }
 .highlights{
-    color: blue;
+    color: rgb(255, 106, 0);
     border: 1px;
     border-style: solid;
     background-color: white;
@@ -21,9 +26,30 @@ p{
 
 .normal{
     font-family: 'Times New Roman', Times, serif;
-    color:black
+    color:rgb(20, 208, 33)
+
+}
+a{
+    color: greenyellow;
+}
+a:hover{
+    background-color: azure;
 }
 
-a[href]{
-    background-color: azure;
+span:hover{
+    text-transform: uppercase;
+}
+
+.photo{
+    border: 3px;
+    border-style: solid;
+    border-color: bisque;
+    padding: 1rem;
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.subtitle{
+    color: greenyellow;
 }
