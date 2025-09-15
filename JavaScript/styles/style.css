@@ -1,9 +1,29 @@
-h1 {
+body {
+    background-color: bisque;
+}
+.title {
     font-family: monospace;
     color:red;
+    text-align: center;
 }
+
 p{
+    text-align: center;
+}
+.highlights{
     color: blue;
     border: 1px;
     border-style: solid;
+    background-color: white;
+    padding: 20px;
+
+}
+
+.normal{
+    font-family: 'Times New Roman', Times, serif;
+    color:black
+}
+
+a[href]{
+    background-color: azure;
 }
