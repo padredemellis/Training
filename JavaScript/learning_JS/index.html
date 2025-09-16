@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <p>Enter your name</p>
+    <input type="text" id="nameUser">
     <button onclick="salutation()">Greeting</button>
     <script>
         function salutation(){
-            alert("Hello world");
+            alert(`Hola ${document.getElementById("nameUser").value}`);
         }
     </script>
 </body>
