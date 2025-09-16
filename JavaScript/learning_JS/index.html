@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+</head>
+<body>
+    <p>Enter your name</p>
+    <input type="text" id="nameUser">
+    <button onclick="printName()">Enter</button>
+    <h1 id="exit">I not know your name</h1>
+
+    <script>
+        function printName(){
+            let elementName = document.getElementById("nameUser").value;
+            let elementText = document.getElementById("exit");
+            elementText.textContent = `Great, I know! Your name is: ${elementName}`;
+        }
+    </script>
+</body>
+</html>
