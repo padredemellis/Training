@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>Enter your name</p>
+    <input type="text" id="nameUser">
+    <button onclick="salutation()">Greeting</button>
+    <script>
+        function salutation(){
+            let myName = document.getElementById("nameUser").value;
+            alert(`Hola ${myName}`);
+        }
+        const nameMe = "Emmay"
+        let myAge;
+        myAge = 34;
+        alert(`My name is ${nameMe} and my age is: ${myAge}`);
+    </script>
+</body>
+</html>
