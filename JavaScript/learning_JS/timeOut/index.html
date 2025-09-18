@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut</title>
+</head>
+<body>
+    <input type="number" id="chosenTime">
+    <button onclick="startTime()">Alarm</button>
+    <h1 id="title" style="color: blue;">Of</h1>
+    <script>
+        let secondsElemets = document.getElementById("chosenTime");
+        let h1title = document.getElementById("title");
+        function startTime(){
+            setTimeout(timeOver, 1000 * secondsElemets.value);
+        }
+        function timeOver(){
+            h1title.textContent = "On";
+            h1title.style.color = "green";
+
+        }
+    </script>    
+</body>
+</html>
