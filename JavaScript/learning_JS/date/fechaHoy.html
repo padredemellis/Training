@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's date</title>
+</head>
+<body>
+    <button onclick="mostrarFecha()">Click here </button>
+    <script>
+        function mostrarFecha() {
+            let fechaHoy = new Date();
+            let hoyFecha = "DD/MM/YYYY"
+            alert(fechaHoy.toLocaleDateString('es-ES', hoyFecha));
+}
+    </script>
+</body>
+</html>

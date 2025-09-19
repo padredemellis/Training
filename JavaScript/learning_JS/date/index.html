@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body onload="startClock()">
+
+    <input type="number" id="chosenTime">
+    <button onclick="startTime()">Alarm</button>
+    <h1 id="title">00:00:00</h1>
+    <audio id="sound">
+        <source src="/JavaScript/learning_JS/audio/yoshi_1.mp3" type="audio/mpeg">
+        <p>Invalid sound</p>
+    </audio>
+    
+    <script>
+        let enteredNumber = document.getElementById("chosenTime");
+        let titleH1 = document.getElementById("title");
+        let sound = document.getElementById("sound");
+
+        function startTime(){
+            setTimeout(timeOver, 1000 * enteredNumber.value);
+        }
+        function timeOver(){
+            
+            titleH1.style.color = "red";
+            sound.play();
+        }
+        function startClock(){
+            setInterval(ticTac,1000);
+        }
+        function ticTac(){
+            let actualTime = new Date();
+            let hour = actualTime.getHours();
+            let minutes = actualTime.getMinutes();
+            let seconds = actualTime.getSeconds();
+            let textTime = `${hour}:${minutes}:${seconds}`;
+            titleH1.textContent = textTime;
+        }
+    </script>
+</body>
+</html>
