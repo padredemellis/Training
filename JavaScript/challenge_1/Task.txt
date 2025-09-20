@@ -1,0 +1,21 @@
+Today we've taken our first steps in JavaScript and we're going to put ourselves to the test.
+
+To practice what we've learned, I propose we develop a game! It consists of the player answering some general knowledge questions while a countdown indicates how much time is left before they lose.
+
+The game in question consists of the following items:
+
+- The page must have 5 questions, each with its respective text box for the player to enter their answer. You can invent any questions you want.
+
+- At the bottom of the page, there must be a "Finish" button that the player will press after answering all the questions. This button will take each of the answers and display them in a message on the screen (alert), along with today's date.
+
+- When the page loads (onload), a countdown must start (30 seconds), which, when the time runs out, should display a "Game Over" message along with an audio that indicates the end of the game. This countdown must be visible on the screen so the player can see it decrease second by second.
+
+To make the solution optimal, here are some extra points:
+
+- If the player manages to finish the game on time, the countdown must stop, otherwise the "Game Over" message will appear incorrectly. I will help you solve this point later.
+
+- Add a "Try Again" button, which will reload the page, restarting the game. The code to reload the page is as follows: location.reload();
+
+- If you dare, you can add CSS styles to your game!
+
+This project has a certain degree of complexity, so I advise you to take time to think and reread the statement, and rely on the work guide that you will find at the end of this lesson, as it will provide you with a very useful step-by-step guide. So the next step is for you to open that questionnaire and follow the support instructions.
