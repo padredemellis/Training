@@ -7,35 +7,42 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body onload="showFinishTime()" onload="startClock()">
-    <audio id="alarm">
-     <source src="super-mario-death-sound-sound-effect.mp3"
-     type="audio/mpeg">
-     <p>Invalid sound</p>
-    </audio>
-    <h1>You have <strong>30 seconds</strong> to complete the questionnaire</h1>
+<body onload="showFinishTime()">
+    <h2>You have <strong><span id="countdown"></span></strong> to complete the questionnaire</h1>
     <h1 class="title" id="time">00:00:00</h1>
     <section class="one">
-        <p>What was the name of diciple of <i>Elijah's</i>?</p>
+        <p>1- What was the name of diciple of <i>Elijah's</i>?</p>
         <input type="text" id="Answer_1">
     </section>
     <section class="two">
-        <p>¿What was the name of <mark>Adam's</mark> third son?</p>
+        <p>2- What was the name of <mark>Adam's</mark> third son?</p>
         <input type="text" id="Answer_2">
     </section>
     <section class="three">
-        <p>What do you <b>eat and drink</b> at the Last Supper?</p>
+        <p>3- What do you <b>eat and drink</b> at the Last Supper?</p>
         <input type="text" id="Answer_3">
     </section>
     <section class="four">
-        <p>¿What are the names of the most famous <small>twin brothers</small> in the Bible?</p>
+        <p>4- ¿What are the names of the most famous <small>twin brothers</small> in the Bible?</p>
         <input type="text" id="Answer_4">
     </section>
     <section class="five">
-        <p>Tell me one of the names of <u>Job's daughters</u></p>
+        <p>5- Tell me one of the names of <u>Job's daughters</u></p>
         <input type="text" id="Answer_5">
+        <br><br>
     </section>
-    <button>Finish</button>
+    <section>
+        <button onclick="finish()">I finished</button>
+        <br><br>
+        <button onclick="tryAgain()">Try again</button>
+        <audio id="alarm">
+            <source src="super-mario-death-sound-sound-effect.mp3"
+            type="audio/mpeg">
+            <p>Invalid sound</p>
+        </audio>
+    </section>
+    
+    
     
 
 </body>
