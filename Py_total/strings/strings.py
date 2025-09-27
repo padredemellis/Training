@@ -29,7 +29,9 @@ print(name.replace("u", "ú" )) #Jesús
 learn = "learn"
 python = "python"
 space = " ".join([learn,python])
+print(type(space))
 print(space) #learn python
+
 
 print("is good" in space) #False
 print("py" not in space) #False
