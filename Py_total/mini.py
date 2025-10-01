@@ -224,12 +224,42 @@ def reverseList(listToReverse):
 listToReverse = [input("enter an element") for e in range(3)]
 print(reverseList(listToReverse))
 print("End of the exercise".center(50,"*"))
-"""
-27. Encontrar el elemento mayor y menor de una lista numérica
-28. Crear una nueva lista con solo elementos únicos
-29. Combinar dos listas alternando elementos
-30. Dividir una lista en dos mitades
 
+print("27. Encontrar el elemento mayor y menor de una lista numérica")
+def findMaxMin(listTofind):
+    elementMax = max(listTofind)
+    elementMin = min(listTofind)
+    return f"Max = {elementMax} & Min = {elementMin}"
+print(findMaxMin([2,4,8,9,10,0]))
+print("End of the exercise".center(50,"*"))
+
+print("28. Crear una nueva lista con solo elementos únicos")
+unique_elements = list({1,2,1,2,3,4,5})
+print(unique_elements)
+print("End of the exercise".center(50,"*"))
+
+print("29. Combinar dos listas alternando elementos")
+listOne = [1,2,3,4]
+listTwo = ["a","b","c","d"]
+unitedList = list(zip(listOne, listTwo))
+for n, l in unitedList:
+    print(f'Letra: {l}, y Número: {n}')
+print("End of the exercise".center(50,"*"))
+print("End of the exercise".center(50,"*"))
+print("30. Dividir una lista en dos mitades")
+def twoHalves(listTocut: list):
+    listOne = []
+    listTwo = []
+    lenght = len(listTocut)
+    if lenght % 2 == 0:
+        listOne = listTocut[0:lenght //2]
+        listTwo = listTocut[lenght //2:]
+    else:
+        listOne = listTocut[0: lenght //2 + 1]
+        listTwo = listTocut[lenght // 2 + 1:]
+    return f"La primer mitad es: {listOne}\nLa segunda mitad es: {listTwo}"
+print(twoHalves([1,2,3,4]))
+"""
 **Avanzados:**
 31. Crear una función que ordene una lista sin usar sort()
 32. Encontrar elementos comunes entre dos listas
