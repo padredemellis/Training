@@ -259,6 +259,7 @@ def twoHalves(listTocut: list):
         listTwo = listTocut[lenght // 2 + 1:]
     return f"La primer mitad es: {listOne}\nLa segunda mitad es: {listTwo}"
 print(twoHalves([1,2,3,4]))
+print("End of the exercise".center(50,"*"))
 """
 **Avanzados:**
 31. Crear una función que ordene una lista sin usar sort()
@@ -266,26 +267,90 @@ print(twoHalves([1,2,3,4]))
 33. Rotar elementos de una lista hacia la derecha
 34. Crear sublistas de tamaño n de una lista grande
 35. Implementar búsqueda binaria en una lista ordenada
+"""
 
 ## 🎯 TUPLAS Y ESTRUCTURAS DE DATOS (Ejercicios 36-45)
+print("36. Crear una tupla con coordenadas (x, y) y acceder a cada valor")
+tupla = ("x","y")
+print(f"{tupla[0]}, {tupla[1]}")
+print("End of the exercise".center(50,"*"))
+print("37. Convertir una lista a tupla y viceversa")
+lista = ["coso","mono"]
+tupla = tuple(lista)
+lista = [tupla]
+print(f"{type(tupla)}, {type(lista)}")
+print("End of the exercise".center(50,"*"))
 
-36. Crear una tupla con coordenadas (x, y) y acceder a cada valor
-37. Convertir una lista a tupla y viceversa
-38. Crear un diccionario con datos personales
-39. Agregar y eliminar elementos de un diccionario
-40. Iterar sobre las claves y valores de un diccionario
-41. Crear una lista de tuplas con nombre y edad
-42. Usar tuplas como claves de diccionario
-43. Crear un conjunto (set) y realizar operaciones básicas
-44. Encontrar intersección entre dos conjuntos
-45. Crear una estructura de datos anidada (lista de diccionarios)
+print("38. Crear un diccionario con datos personales")
+datosPersonales = {"name":input("enter your name: "), "age":input("enter your age: ")}
+print("39. Agregar y eliminar elementos de un diccionario")
+datosPersonales["lastaName"] = input("enter your lastname: ")
+print(datosPersonales)
+del datosPersonales["lastaName"]
+print(datosPersonales)
+
+print("40. Iterar sobre las claves y valores de un diccionario")
+for k,v in datosPersonales.items():
+    print(f"This is the key: {k}, this is the value {v}")
+
+print("41. Crear una lista de tuplas con nombre y edad")
+listaTuplas = [("nombre","edad")]
+
+print("42. Usar tuplas como claves de diccionario")
+diccionarioDeTuplas = {}
+diccionarioDeTuplas[listaTuplas[0][0]] = "Emanuel"
+diccionarioDeTuplas[listaTuplas[0][1]] = 33
+print(diccionarioDeTuplas)
+
+print("43. Crear un conjunto (set) y realizar operaciones básicas")
+conjuntoA = set([1,2,3,4,5,6])
+conjuntoB = {2,5,8,9,63,0,7}
+print("44. Encontrar intersección entre dos conjuntos")
+print(f"La interseccion es {conjuntoA & conjuntoB}")
+
+print("45. Crear una estructura de datos anidada (lista de diccionarios)")
+listaDeDicc = [
+    {
+        "nombre":"Ema",
+        "edad": 33
+    },
+    {
+        "nombre":"Mayra",
+        "edad": 34
+    },
+    {
+        "nombre":"Josi",
+        "edad": 3
+    }
+    ]
+for diccionario in listaDeDicc:
+    nombre = diccionario["nombre"]
+    edad = diccionario["edad"]
+    print(f"El empleado se llama {nombre} y tiene {edad}")
+
 
 ## 🔢 ENTRADA DE USUARIO Y CONVERSIONES (Ejercicios 46-55)
 
-46. Pedir nombre al usuario y saludarlo personalizado
-47. Solicitar un número y verificar si es par o impar
-48. Pedir dos números y mostrar todas las operaciones matemáticas
-49. Validar que la entrada del usuario sea un número válido
+print("46. Pedir nombre al usuario y saludarlo personalizado")
+name = input("enter your name: ")
+print(f"Bienvenido {name}")
+print("47. Solicitar un número y verificar si es par o impar")
+number = int(input("enter an number: "))
+if number %2 == 0:
+    print(f" {number} is even")
+else:
+    print(f" {number} is odd")
+
+print("48. Pedir dos números y mostrar todas las operaciones matemáticas")
+numberA = int(input("enter an number: "))
+numberB = int(input("enter an number: "))
+add = numberA + numberB
+subtraction = numberA - numberB
+division = numberA / numberB
+multiplication = numberA * numberB
+print(f"49. Validar que la entrada del usuario sea un número válido")
+
+    
 50. Crear un menú simple con opciones numeradas
 51. Pedir una lista de números separados por comas
 52. Convertir temperatura de Celsius a Fahrenheit
@@ -297,7 +362,7 @@ print(twoHalves([1,2,3,4]))
 
 **Condicionales:**
 56. Determinar si un año es bisiesto
-57. Clasificar edad en categorías (niño, adolescente, adulto)
+ñññ@57. Clasificar edad en categorías (niño, adolescente, adulto)
 58. Crear un sistema de calificaciones (A, B, C, D, F)
 59. Verificar si un triángulo es válido dados tres lados
 60. Determinar el mayor de tres números
